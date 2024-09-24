@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="Pizza.css" rel="stylesheet">
+    <title>SantosPizzas</title>
+</head>
+
+<body>
+    <h1>Santos Pizza</h1>
+    <p>The Best Out The West!</p>
+
+    <div class="logo-circle">
+        <img src="resources/santoss.png" width="200px">
+    </div>
+
+    <fieldset>
+        <header>
+            <div class="photo-grid">
+                <div class="photo-item">
+                    <img src="resources/hawain.jpg" alt="hawai">
+                    <br>
+                    <figcaption><i>HAWAIAN</i></figcaption>
+                    <div class="description">Savor the tropical flavors of our Hawaiian pizza, featuring a golden
+                        crust topped with zesty tomato sauce, melted mozzarella cheese, juicy pineapple chunks, and
+                        savory ham. This sweet and savory combination is a delicious twist on a classic favorite!
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <img src="resources/pepperoni.jpg" alt="pepperoni">
+                    <br>
+                    <figcaption><i>PEPPERONI</i></figcaption>
+                    <div class="description">Enjoy a classic pepperoni pizza featuring a perfectly baked crust
+                        topped with rich tomato sauce, gooey mozzarella cheese, and generous slices of savory
+                        pepperoni. Each bite delivers a delightful combination of flavors that will satisfy your
+                        cravings!
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <img src="resources/meatlovers.jpg" alt="Meatlovers">
+                    <br>
+                    <figcaption><i>MEATLOVERS</i></figcaption>
+                    <div class="description">Indulge in our Meat Lovers pizza, loaded with a hearty mix of savory
+                        toppings including pepperoni, sausage, ham, and crispy bacon, all nestled on a bed of gooey
+                        mozzarella and rich tomato sauce. Perfect for those who crave a protein-packed feast!
+                    </div>
+                </div>
+            </div>
+        </header>
+    </fieldset>
+
+    <h2>Select Order Here</h2>
+    
+    <label for="order1">Hawain:</label>
+    <select id="order1" onchange="calculateTotal()">
+        <option value="0">Select Pizza Size</option>
+        <option value="15.99">Small - $9.99</option>
+        <option value="25.50">Medium - $14.50</option>
+        <option value="9.99">Large - $20.99</option>
+    </select>
+
+    <label for="order2">Pepperoni:</label>
+    <select id="order2" onchange="calculateTotal()">
+        <option value="0">Select Pizza Size</option>
+        <option value="20.00">Small - $5.00</option>
+        <option value="5.50">Medium  - $12.50</option>
+        <option value="12.75">Large - $14.75</option>
+    </select>
+
+    <label for="order3">Meatlovers:</label>
+    <select id="order3" onchange="calculateTotal()">
+        <option value="0">Select Pizza Size </option>
+        <option value="8.50">Small - $8.50</option>
+        <option value="30.00">Medium  - $10.00</option>
+        <option value="2.99">Large - $15.99</option>
+    </select>
+
+    <h3 id="totalDisplay">Order Total: $0.00</h3>
+
+    <a href="file:///Users/student/Workspace/Pizza/Santos%20Pizza/SantosPizza.html" style="text-decoration: none;">
+    <input type="submit" value="Submit" style="background-color: #4CAF50; color: rgb(255, 247, 0); padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;"> </a>
+ 
+
+
+    <script>
+        function calculateTotal() {
+            const order1 = parseFloat(document.getElementById('order1').value) || 0;
+            const order2 = parseFloat(document.getElementById('order2').value) || 0;
+            const order3 = parseFloat(document.getElementById('order3').value) || 0;
+            
+            const total = order1 + order2 + order3;
+
+            // Display the total
+            document.getElementById('totalDisplay').innerText = `Total: $${total.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>

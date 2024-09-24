@@ -1,0 +1,57 @@
+h1,h2,p{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    color: black;
+}
+
+.logo-circle {
+  
+    border-radius: 100px; /* Makes the div circular */
+    display: flex;
+    justify-content: center; /* Center image horizontally */
+    align-items: center; /* Center image vertically */
+}
+body {
+
+    background-color: #f3eac8; /* Optional: background color */
+    align-items: center;
+}
+
+
+    .photo-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        gap: 16px; /* Space between items */
+        max-width: 800px; /* Optional: max width for the grid */
+        margin: auto; /* Center the grid */
+    }
+    .photo-item {
+        text-align: center; /* Center text under images */
+    }
+    .photo-item img {
+        width: 100%; /* Make images responsive */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 8px; /* Optional: rounded corners */
+    }
+    .description {
+        margin-top: 8px; /* Space between image and description */
+        font-size: 14px; /* Font size for description */
+        color: #555; /* Description text color */
+    }
+    select {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .button {
+        background-color: #4CAF50; /* Green */
+        color: rgb(214, 241, 92);
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #45a049; /* Darker green on hover */
+    }
